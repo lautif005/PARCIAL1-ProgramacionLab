@@ -16,9 +16,13 @@ Esta aplicación de consola permite gestionar **Películas** y **Ventas** usando
 2. **Ejecutar Menú de Películas**:
    `./gradlew run --args="org.example.main.MenuPeliculas"`
 
-3. **Ejecutar Menú de Ventas**:
+3. **Crear una película (opción 3) y Seguir con el Flujo de la Ejecución**:
+
+4. **Ejecutar Menú de Ventas**:
 
    `./gradlew run --args="org.example.main.MenuVentas"`
+
+5. **Crear una venta (opción 3) y Seguir con el Flujo de la Ejecución**:
 
 ## Aclaración
 

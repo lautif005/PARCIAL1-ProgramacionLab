@@ -26,7 +26,6 @@ public class PeliculaDAOimpl implements PeliculaDAO {
             stmt.executeUpdate();
             logger.info("Nueva Película Guardada: {}", pelicula.getTitulo());
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Guardad Película: {}", pelicula, e);
         }
     }
@@ -46,7 +45,6 @@ public class PeliculaDAOimpl implements PeliculaDAO {
                 logger.info("No existe película con ID: {}", id);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Buscar Película con ID {}: {}", id, e);
         }
         return null;
@@ -65,7 +63,6 @@ public class PeliculaDAOimpl implements PeliculaDAO {
             }
             logger.info("Se Listaron Películas: {}", lista.size());
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Listar Películas: ", e);
         }
         return lista;
@@ -88,7 +85,6 @@ public class PeliculaDAOimpl implements PeliculaDAO {
                 logger.warn("No se Encontró Película con ID para Actualizar: {}", pelicula.getId());
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Actualizar Película con ID: {}", pelicula.getId());
         }
     }
@@ -108,7 +104,6 @@ public class PeliculaDAOimpl implements PeliculaDAO {
                 return false;
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Eliminar Película con ID: {}", id, e);
             return false;
         }

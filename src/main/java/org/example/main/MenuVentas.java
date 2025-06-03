@@ -133,8 +133,9 @@ public class MenuVentas {
                         existente.setFecha(fecha);
                         existente.setPelicula_id(peliculaId);
                         existente.setCantidad(cantidad);
-                        Resultado<Boolean> res = ventaDAO.actualizarConResultado(existente);
-                        System.out.println(res.getMensaje());
+                        // Resultado<Boolean> res = ventaDAO.actualizarConResultado(existente);
+                        Resultado<Boolean> res2 = ventaDAO.registrarVentasTransaccion(existente);
+                        System.out.println(res2.getMensaje());
                     } catch (NumberFormatException e) {
                         logger.warn("Valores Inválidos al Actualizar Venta");
                         System.out.println("Error: Ingresá valores válidos.");

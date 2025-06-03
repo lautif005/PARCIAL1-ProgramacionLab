@@ -25,7 +25,6 @@ public class VentaDAOimpl implements VentaDAO {
             stmt.executeUpdate();
             logger.info("Guardada Nueva Venta: {}", venta.getId());
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Guardar Venta: {}", venta, e);
         }
     }
@@ -45,7 +44,6 @@ public class VentaDAOimpl implements VentaDAO {
                 logger.warn("No Existe Venta con ID: {}", id);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Buscar Venta con ID: {}", id, e);
         }
         return null;
@@ -64,7 +62,6 @@ public class VentaDAOimpl implements VentaDAO {
             }
             logger.info("Se Listaron Ventas: {}", lista.size());
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Listar Ventas: ", e);
         }
         return lista;
@@ -86,7 +83,6 @@ public class VentaDAOimpl implements VentaDAO {
                 logger.warn("No se encontró Venta con ID para Actualizar: {}", venta.getId());
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Actualizar Venta con ID: {}", venta.getId(), e);
         }
     }
@@ -106,7 +102,6 @@ public class VentaDAOimpl implements VentaDAO {
                 return false;
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             logger.error("Error al Cancelar Venta con ID: {}", id, e);
             return false;
         }
